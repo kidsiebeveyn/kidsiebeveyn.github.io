@@ -330,6 +330,21 @@ $('.owl-carousel').owlCarousel({
   });
 });
 
+	jQuery(function($){
+		//ANA SAYFA DEVAMINI OKU
+		$('.devamyazi').on('click',function(){
+			
+			if($(this).hasClass('aktif')){
+				$('.caticerik').css({'height':'20px'});
+				$(this).removeClass('aktif');
+			}else{
+				$('.caticerik').css({'height':'auto'});
+				$(this).addClass('aktif');
+			}
+			
+		});
+		//ANA SAYFA DEVAMINI OKU
+	});
 </script>
 
 
