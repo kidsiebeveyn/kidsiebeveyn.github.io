@@ -5,7 +5,13 @@
     font-family: 'Poppins', sans-serif;
    scroll-behavior: smooth;
 }
-
+	.caticerik{ 
+	height: 20px;
+    overflow: hidden;
+	}
+	.devamyazi{
+	cursor:pointer;
+	}
 .header{
     min-height: 100vh;
     width: 100%;
