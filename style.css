@@ -329,8 +329,8 @@ nav .fa-solid{
   @media (max-width: 500px) {
     .containers {
         text-align: center;
-	margin-left:60px;
-	margin-right:150px
+	margin-left:40px;
+	
     }
     .containers img {
         margin: auto;
