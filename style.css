@@ -1,0 +1,390 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+   scroll-behavior: smooth;
+}
+#countdown_container{
+	border-radius: 2px;
+	text-align: center;
+	font-weight: bold;
+	background: #a0a0a0;
+	border: 5px dashed #ffffff;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+#countdown_timer>div{
+	float: left;
+	background:#777777; /*black theme*/
+	background:#e0e0e0; /*white theme*/
+	padding:15px 20px;
+	margin:10px 5px;
+	text-align:center;
+	border-radius: 4px;
+}
+
+#countdown_timer>div>div:first-child{
+	font-size:28px;
+	color:#ff6000; /*black theme*/
+	color:#0ab306; /*white theme*/
+	text-shadow: 0px 1px 0px #056d03; /*white theme*/
+}
+
+#countdown_timer>div>div:last-child{
+	text-transform: capitalize;
+	font-size:14px;
+	color:#fff; /*black theme*/
+	color:#444; /*white theme*/
+}
+.pekyakinda{
+    color: red;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+.icons{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 11111;
+}
+
+@media(max-width: 700px){
+    .icons{
+        position:fixed;
+        bottom: 40px;
+        right: 50px;
+        z-index: 11111;
+    }
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background: url("images/profilegiris.png") no-repeat center;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    
+    background-color: rgb(127, 176, 176);
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 111111;
+    margin-bottom: 0px;
+}
+nav img{
+    width: 100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #0e0f72;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0e0f72;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    margin: 200px 0 auto 40px;
+}
+.text-box h1{
+    font-size: 62px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: #0e0f72;
+}
+.text-box p{
+    font-size: 38px;
+    color: #0e0f72;
+    margin: 5px 0;
+}
+.text-box a{
+    display: inline-block;
+    background: rgb(127, 176, 176);
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(127, 176, 176);
+    transition: all 0.3s ease;
+}
+.text-box a:hover{
+    color: rgb(127, 176, 176);
+    background: none;
+}
+nav .fa-solid{
+    display: none;
+}
+
+/*----- Responsive -----*/
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        display: block;
+        position: absolute;
+        background: #0e0f72;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .nav-links ul li a{
+        color: #fff;
+    }
+    nav .fa-solid{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*----- Hakkımızda -----*/
+
+.about{
+    background: rgb(127, 176, 176);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.about h1{
+    color: #0e0f72;
+    font-size: 36px;
+    font-weight: 600;
+}
+.about h2{
+    color: #111;
+    font-size: 22px;
+    font-weight: 400;
+}
+.about p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.about-col{
+    flex-basis: 31%;
+    background: rgba(255, 255, 255, 0.194);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.about-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.box{
+    text-align: center;
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    background-color: #323361;
+    
+}
+.box h2{
+    font-size: 24px;
+    font-weight: 400;
+}
+.box p{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+}
+.box:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*----- Responsive -----*/
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*----- Araştırmalar -----*/
+
+
+.research{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+.research .research-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.research h1{
+    color: #0e0f72;
+    font-size: 36px;
+    font-weight: 600;
+}
+.research .research-content{
+    margin-top: 30px;
+    width: 100%;
+    justify-content: space-between;
+}
+.research-col p{
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 16px;
+    background: rgb(225, 207, 169);
+}
+
+.research .left{
+    width: 45%;
+}
+.research .left img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    background-color: transparent;
+	box-shadow: 0 0 25px #111;
+	border: 3px solid #333;
+}
+.research .right{
+    width: 55%;
+}
+.research .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/*----- Biz Kimiz ? -----*/
+.team{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;  
+}
+.team h1{
+    margin-bottom: 10px;
+    color: #0e0f72;
+    font-size: 36px;
+    font-weight: 600;   
+}
+
+/*----- En alt kısım -----*/
+  footer {
+    max-width: 100%;
+    background-color:rgb(127, 176, 176);
+  }
+  footer .r-icon a {
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border: 1px solid #848484;
+    border-radius: 50%;
+  }
+  footer .r-icon a:hover {
+    border: 1px solid #eee;
+    color: #eee;
+    transition: 0.5s all;
+  }
+  .contact .r-icon {
+    font-size: 50px;
+    text-align: center;
+  }
+  .containers {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-right: 140px;
+    
+
+  }
+  
+  .containers::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .containers img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .containers span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  /*----- Responsive -----*/
+  
+  @media (max-width: 500px) {
+    .containers {
+        text-align: center;
+    }
+    .containers img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  }
+  .caticerik{ 
+	height: 210px;
+    overflow: hidden;
+	}
+	.devamyazi{
+	cursor:pointer;
+	}
